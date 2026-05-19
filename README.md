@@ -73,11 +73,11 @@ Platform = "3588"
 
 1.  **配置：** 根据上述说明修改 `config.go` 文件。
 2.  **准备签名文件：** 将你的 `.jks` 签名文件重命名为 `keystore.jks`，并放置在项目根目录下。
-3.  **编译：** 在项目根目录运行 `go build -o apkSign.exe .` 命令。
-4.  **运行：** 将需要签名的 APK 文件拖拽到生成的 `apkSign.exe` 可执行文件上。
+3.  **编译：** 在项目根目录运行 `go build -o apk-signer.exe .` 命令。
+4.  **运行：** 将需要签名的 APK 文件拖拽到生成的 `apk-signer.exe` 可执行文件上。
 5.  **输出：** 签名后的 APK 文件将生成在原 APK 文件所在的目录，命名格式为 `原文件名_Platform_sign.apk`。
 
 ## 注意事项
 
 *   确保你的系统已安装 Java 运行环境 (JRE)，因为 `apksigner.jar` 依赖 Java。
-*   `aapt.exe`, `apksigner.jar`, `zipalign.exe` 和 `keystore.jks` 会被嵌入到最终的 `apk-signer.exe` 中。
+*   `aapt.exe`, `apksigner.jar`, `zipalign.exe` 和 `key.jks` 会被嵌入到最终的 `apk-signer.exe` 中。
